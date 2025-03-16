@@ -105,6 +105,12 @@ section .container {
     text-align: center;
 }
 
+.main-menu {
+    width: 70%; /* Ensures content does not exceed 70% of the viewport width */
+    max-width: 1200px; /* Optional cap to prevent excessive width on large screens */
+    margin: 0 auto; /* Centers the menu */
+}
+
 .two-columns {
     display: flex;
     gap: 40px; /* Adjust spacing between columns */
@@ -244,10 +250,8 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-        width: 70%; /* Ensures content does not exceed 70% of the viewport width */
-        max-width: 1200px; /* Optional cap to prevent excessive width on large screens */
-        margin: 0 auto; /* Centers the menu */
-    }
+    width: 100%;
+}
 
 /* ========== Step-by-Step Instructions ========== */
 .step {
