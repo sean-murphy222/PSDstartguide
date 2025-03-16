@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         document.body.classList.add("fading-out");
 
                         setTimeout(() => {
-                            window.location.href = "/pages/landing.html"; // Redirect smoothly
+                            window.location.href = "pages/landing.html"; // Redirect smoothly
                         }, 1500);
                     }, 1000);
                 }, 1000);
