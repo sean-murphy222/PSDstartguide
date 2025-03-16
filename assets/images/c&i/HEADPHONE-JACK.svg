@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15.76 15.76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient);
+        stroke: #969696;
+        stroke-miterlimit: 10;
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="7.88" cy="7.88" fx="7.88" fy="7.88" r="7.38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#333"/>
+      <stop offset=".47" stop-color="#2e2e2e"/>
+      <stop offset=".98" stop-color="#212121"/>
+      <stop offset="1" stop-color="#212121"/>
+    </radialGradient>
+  </defs>
+  <g id="HEADPHONES">
+    <circle id="HEADPHONE_JACK" data-name="HEADPHONE JACK" class="cls-1" cx="7.88" cy="7.88" r="7.38"/>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 87.84 87.84">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4a494a;
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="43.92" cy="43.92" fx="43.92" fy="43.92" r="43.92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#333"/>
+      <stop offset=".47" stop-color="#2e2e2e"/>
+      <stop offset=".98" stop-color="#212121"/>
+      <stop offset="1" stop-color="#212121"/>
+    </radialGradient>
+  </defs>
+  <g id="VOLUME_KNOB_OFF" data-name="VOLUME KNOB OFF">
+    <g id="volumne_off" data-name="volumne off">
+      <circle id="VOLUME_KNOB" data-name="VOLUME KNOB" class="cls-2" cx="43.92" cy="43.92" r="43.92"/>
+      <rect class="cls-1" x="2.94" y="42.89" width="16.23" height="2.05"/>
+    </g>
+  </g>
+</svg>

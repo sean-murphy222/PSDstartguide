@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voltage Testing Procedure</title>
+    <script src="../assets/js/header-footer-loader.js"></script>
+    <script src="../assets/js/tshoot.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css"/>
+      
+</head>
+<body>
+    <h2>MAINTAINER TROUBLESHOOTING<br />
+    DEFECTIVE PU</h2>
+    <!-- Initial Setup Box -->
+    <div class="setup-box" id="setupBox">
+        <h3 onclick="toggleSetup()">Initial Setup</h3>
+        <div class="content">
+            <div class="setup-column">
+                <h3>Test and Diagnostic Equipment</h3>
+                <p><a href="#supporting-info">Multimeter</a></p>
+                <h3>References</h3>
+                <p><a href="#operationProcedure">Operation Procedure</a></p>
+                <p><a href="#shutDownProcedure">Shut Down Procedure</a></p>
+            </div>
+            <div class="setup-column">
+                <h3>Equipment Condition</h3>
+                <p><a href="#shutDownProcedure">Shut Down Procedure</a></p>
+            </div>
+        </div>
+    </div>
+    <section>
+
+         <!-- Warning Section -->
+<div class="warning-box">
+    <h2>⚠ WARNING ⚠</h2>
+    <img src="../assets/images/Electrical-hand.svg" alt="Warning" class="warning-icon" />
+    <p>
+        This procedure involves testing live voltage. Always ensure you use caution when working with live voltage. 
+        Do not wear rings or other jewelry, as it may arc, causing instant heating of metals. Always use insulated-handled tools. 
+        Failure to follow this warning may result in injury or death to personnel. Seek immediate attention if injury occurs.
+    </p>
+</div>
+
+    </section>
+
+<section>
+    
+
+
+<button onclick="toggleViewMode()">Toggle View Mode</button>
+
+<!-- Step 1 -->
+<div id="tshoot1" class="tshoot-step active" data-type="test">
+    <h2>Malfunction - No Voltage</h2>
+    <ol>
+        <li>Disconnect W1 from input power.</li>
+        <li>Establish power to system <a href="#operationProcedure">Operation Procedure</a>.</li>
+        <li>Measure for voltage at W1. Voltage should be 208 VAC.</li>
+    </ol>
+    <p>Was proper voltage found?</p>
+    <button onclick="nextTshootStep('tshoot-replacePU')">No</button>
+    <button onclick="nextTshootStep('tshoot-measureBeforeW1')">Yes</button>
+</div>
+
+<!-- Replace PU -->
+<div id="tshoot-replacePU" class="tshoot-step" data-type="test">
+    <h2>Replace PU</h2>
+    <p>Replace PU IAW <a href="#maintenance.html"></a></p>
+</div>
+
+<!-- Measure Before W1 -->
+<div id="tshoot-measureBeforeW1" class="tshoot-step" data-type="test">
+    <h2>Malfunction - No Voltage Cont.</h2>
+    <ol>
+        <li>Shut down IAW <a href="#shutDownProcedure">Shut Down Procedure</a>.</li>
+        <li>Disconnect W1 from power supply.</li>
+        <li>Establish power IAW <a href="#operationProcedure">Operation Procedure</a>.</li>
+        <li>Measure for voltage at power supply. Voltage should be 208 VAC.</li>
+    </ol>
+    <p>Was proper voltage found?</p>
+    <button onclick="nextTshootStep('tshoot-testPowerSupply')">No</button>
+    <button onclick="nextTshootStep('tshoot-testW1')">Yes</button>
+    
+</div>
+
+<!-- Replace W1 -->
+<div id="tshoot-testPowerSupply" class="tshoot-step" data-type="end">
+    <h2>Test Power Supply</h2>
+    <p>Troubleshooting power supply IAW appropriate TM.</p>
+</div>
+
+<!-- Test W1 -->
+<div id="tshoot-testW1" class="tshoot-step" data-type="test">
+    <h2>Test W1</h2>
+    <ol>
+        <li>Measure for continuity between J1 and P1. Continuity should be found.</li>
+        <li>Measure for continuity between J2 and P2. Continuity should be found.</li>
+        <li>Measure for continuity between J3 and P3. Continuity should be found.</li>
+        <li>Measure continuity between all other combinations. No continuity should be found.</li>
+    </ol>
+    <p>Was continuity found as expected?</p>
+    <button onclick="nextTshootStep('tshoot-replaceW1')">No</button>
+    <button onclick="nextTshootStep('tshoot-normalOperation')">Yes</button>
+</div>
+
+<!-- Replace W1 -->
+<div id="tshoot-replaceW1" class="tshoot-step" data-type="end">
+    <h2>Replace W1</h2>
+    <p>Replace W1 with a new unit.</p>
+</div>
+
+<!-- Return to Normal Operation -->
+<div id="tshoot-normalOperation" class="tshoot-step" data-type="end">
+    <h2>Return to Normal Operation</h2>
+    <p>System has passed verification. Resume normal operation.</p>
+</div>
+
+</section>
+<section>
+
+</section>
+</body>
+</html>

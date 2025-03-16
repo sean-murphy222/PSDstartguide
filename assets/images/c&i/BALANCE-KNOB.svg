@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.48 33.48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-2 {
+        fill: #1b1b1b;
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="16.74" cy="16.74" fx="16.74" fy="16.74" r="16.74" gradientUnits="userSpaceOnUse">
+      <stop offset=".15" stop-color="#333"/>
+      <stop offset=".47" stop-color="#2e2e2e"/>
+      <stop offset=".82" stop-color="#212121"/>
+      <stop offset=".83" stop-color="#212121"/>
+    </radialGradient>
+  </defs>
+  <g id="BALANCE">
+    <g id="BALANCE_KNOB" data-name="BALANCE KNOB">
+      <circle class="cls-1" cx="16.74" cy="16.74" r="16.74"/>
+      <polygon class="cls-2" points="19.98 32.91 13.5 32.91 14.85 .32 18.54 .32 19.98 32.91"/>
+    </g>
+  </g>
+</svg>

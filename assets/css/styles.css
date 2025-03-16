@@ -1,0 +1,1510 @@
+/* ========== General Styling ========== */
+:root {
+    --font-primary: "G.I. 400", Arial, sans-serif;
+    --font-bold: "G.I. 530", Arial, sans-serif;
+    --font-heavy: "G.I. 750", Arial, sans-serif;
+
+    --primary-color: #221F20; /* Army Black */
+    --secondary-color: #4B5320; /* Army Green */
+    --accent-color: #FFCC01; /* Army Gold */
+    --text-color: #FFFFFF; /* White */
+    --heading-color: #FFCC01; /* Gold for headings */
+    --border-color: #4B5320; /* Green */
+    --gray-light: #D5D5D7; /* Cool Gray 3 */
+    --gray-dark: #565557; /* Cool Gray 11 */
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for all sections */
+section {
+    padding: 40px 0; /* Adds space above and below the section */
+    border-bottom: 2px solid var(--accent-color); /* Creates a separating line */
+}
+
+/* Optional: Last section shouldn't have a border */
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* Ensures content inside sections has spacing */
+section .container {
+    padding: 20px;
+}
+
+
+/* ========== Fonts ============================== */
+@font-face {
+    font-family: "G.I. 400"; /* Ensure this matches the actual font name */
+    src: url('../fonts/G.I.-400.woff2') format('woff2'),
+         url('../fonts/G.I.-400.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "G.I. 400I"; /* Ensure this matches the actual font name */
+    src: url('../fonts/G.I.-400Italic.woff2') format('woff2'),
+         url('../fonts/G.I.-400Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "G.I. 530"; /* Ensure this matches the actual font name */
+    src: url('../fonts/G.I.-530.woff2') format('woff2'),
+         url('../fonts/G.I.-530.woff') format('woff');
+    font-weight: 530; /* Some fonts may need to be mapped to a standard weight like 500 or 600 */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "G.I. 530I"; /* Ensure this matches the actual font name */
+    src: url('../fonts/G.I.-530Italic.woff2') format('woff2'),
+         url('../fonts/G.I.-530Italic.woff2') format('woff');
+    font-weight: 530; /* Some fonts may need to be mapped to a standard weight like 500 or 600 */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "G.I. 750"; /* Ensure this matches the actual font name */
+    src: url('../fonts/G.I.-750.woff2') format('woff2'),
+         url('../fonts/G.I.-750.woff') format('woff');
+    font-weight: 750; /* Consider mapping this to 700 (bold) if needed */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "G.I. 750I"; /* Ensure this matches the actual font name */
+    src: url('../fonts/G.I.-750Italic.woff2') format('woff2'),
+         url('../fonts/G.I.-750Italic.woff2') format('woff');
+    font-weight: 750; /* Consider mapping this to 700 (bold) if needed */
+    font-style: italic;
+}
+
+
+/* ========== Containers & Layout Fixes ========== */
+.container {
+    
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Ensures content inside pages aligns properly */
+.container.index-page,
+.container.main-menu {
+    
+    text-align: center;
+}
+
+.two-columns {
+    display: flex;
+    gap: 40px; /* Adjust spacing between columns */
+    justify-content: space-between; /* Evenly distribute content */
+    align-items: start; /* Ensures items align at the top */
+}
+
+.column {
+    flex: 1; /* Ensures both columns take up equal space */
+    min-width: 0; /* Prevents overflow issues */
+}
+
+/* Ensure images and videos fit within their column */
+.column img, .column video {
+    max-width: 100%; /* Keeps media responsive */
+    height: auto;
+    display: block; /* Prevents inline spacing issues */
+}
+
+/* Ensure images and videos fit within their column */
+.responsive-img {
+    width: 80%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+/* ========== Page Header Styling ========== */
+header {
+    background-color: #FFCC01; /* Army Gold */
+    color: #221F20; /* Army Black */
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 3px solid #221F20; /* Black border for contrast */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-title {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #221F20; /* Army Black */
+}
+
+.header-logo {
+    height: 40px;
+    width: auto;
+}
+
+/* ========== FOOTER  ========== */
+footer {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Space out left and right sections */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 3px solid var(--border-color);
+}
+
+/* Align the left-side buttons */
+.footer-left {
+    display: flex;
+    gap: 15px; /* Adds spacing between Home and Info buttons */
+}
+
+/* Align the right-side buttons */
+.footer-right {
+    display: flex;
+    gap: 15px; /* Adds spacing between Back and Next buttons */
+    padding-right: 20px;
+}
+
+/* General footer button styling */
+.footer-button {
+    text-decoration: none;
+    font-size: 24px; /* Makes icons/arrows larger */
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-button:hover {
+    color: var(--text-color);
+}
+
+
+/* ========== Page Headings ========== */
+h1, h2, h3 {
+    font-family: var(--font-bold);
+    
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h1 {
+    color: var(--accent-color);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem); /* Responsive font size */
+    color: var(--accent-color);
+    white-space: normal; /* Allows text to break onto new lines */
+    overflow: visible; /* Ensures no hidden text */
+    text-overflow: clip; /* Prevents ellipses */
+    word-wrap: break-word; /* Ensures long words break */
+    max-width: 100%; /* Ensures it doesn't go beyond its container */
+    line-height: 1.2; /* Improves readability */
+}
+
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+/* Ensures "Main Menu" is fully centered */
+.container.main-menu h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        width: 70%; /* Ensures content does not exceed 70% of the viewport width */
+        max-width: 1200px; /* Optional cap to prevent excessive width on large screens */
+        margin: 0 auto; /* Centers the menu */
+    }
+
+/* ========== Step-by-Step Instructions ========== */
+.step {
+    background-color: rgba(75, 83, 32, 0.2); /* Slight transparency for depth */
+    border-left: 5px solid var(--border-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.step-number {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.step-content {
+    margin-left: 10px;
+}
+
+/* Ensure ordered lists are left-aligned */
+ol {
+    text-align: left; /* Prevents centering */
+    padding-left: 30px; /* Adds spacing from the left */
+    margin-left: 0; /* Ensures alignment */
+    list-style-position: outside; /* Keeps numbers outside the content area */
+}
+
+/* Improve spacing between numbers and text */
+ol li {
+    margin-bottom: 8px; /* Adds spacing between list items */
+}
+
+
+/* ========== Buttons ========== */
+button {
+    font-family: var(--font-bold);
+    background-color: var(--gray-dark);
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    font-size: 16px;
+    color: white;
+    background-color: var(--gray-dark);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+/* ========== Pop-up Modal Styling ========== */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popup.active {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
+.popup-content {
+    background: var(--accent-color);
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+}
+
+
+
+/* Ensures the "Record Fault" popup is properly centered and formatted */
+.popup.record-fault {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.record-fault .popup-content {
+    width: 450px;
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.popup.record-fault h3 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.popup.record-fault label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+.popup.record-fault input,
+.popup.record-fault select,
+.popup.record-fault textarea {
+    width: 100%;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background: white;
+    color: black;
+    font-size: 14px;
+}
+
+.popup.record-fault select {
+    appearance: none;
+}
+
+.popup.record-fault textarea {
+    height: 60px;
+    resize: vertical;
+}
+
+.popup-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.popup-controls button {
+    background: var(--gray-dark);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.popup-controls button:hover {
+    background: var(--primary-color);
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: black;
+}
+
+.popup-close:hover {
+    color: red;
+}
+
+.popup-list-text {
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.popup-link {
+    color: var(--accent-color);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+    background: none;
+    border: none;
+    padding: 0;
+    display: inline;
+}
+
+.popup-link:hover {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* ========== Tooltips ========== */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--accent-color); /* Highlight tooltip words */
+    text-decoration: underline;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+/* Show tooltip on hover */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Show tooltip on click (JS-controlled) */
+.tooltip.active .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* ========== Animations ========== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animated-fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* ========== video player ========== */
+.video-container {
+    width: 100%; /* Adjust width as needed */
+    max-width: 800px; /* Prevents video from becoming too large */
+    margin: 0 auto; /* Centers the video */
+}
+
+.video-container video,
+.video-container iframe {
+    width: 100%; /* Ensures it scales within the container */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+/* ========== controls and indicators ========== */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Optional: Dark background for contrast */
+}
+
+.control-panel {
+    position: relative;
+    display: block; /* Ensures it takes full width */
+    width: 90vw; /* Adjust based on preferred size */
+    max-width: 1200px; /* Prevents it from becoming too large on big screens */
+    margin: auto; /* Centers the panel */
+}
+.custom-tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 250px; /* Ensures tooltips don't get too wide */
+    word-wrap: break-word; /* Ensures long words break properly */
+    white-space: normal; /* Allows line breaks */
+    text-align: center;
+    z-index: 1000;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Highlight effect for unhovered items */
+.interactive-layer.unhovered {
+    filter: brightness(1.5);
+    animation: pulse 1s infinite alternate;
+    outline: 2px solid rgba(255, 165, 0, 0.8); /* Orange glow effect */
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.8); /* Outer glow */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% { filter: brightness(1.5); box-shadow: 0 0 10px rgba(255, 165, 0, 0.8); }
+    100% { filter: brightness(1.2); box-shadow: 0 0 5px rgba(255, 165, 0, 0.5); }
+}
+
+/* Remove highlight when hovered */
+.interactive-layer:not(.unhovered) {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+/* Background Image */
+.panel-image {
+    width: 100%; /* Ensures it scales within its container */
+    height: auto;
+    display: block; /* Removes any extra spacing */
+}
+
+/* Interactive Layer (Image + Tooltip) */
+.interactive-layer {
+    position: absolute;
+    width: 50px; /* Adjust based on actual image size */
+    height: auto;
+    top: 10%;  /* Adjust based on position */
+    left: 2.6%;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+/* Click Effect */
+.interactive-layer:active {
+    transform: scale(0.9);
+}
+
+/* Tooltip Styling */
+.interactive-layer:hover::after {
+    content: attr(data-tooltip); /* Pulls text from data-tooltip attribute */
+    position: absolute;
+    bottom: 120%; /* Positions tooltip above the element */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Hide tooltip when not hovering */
+.interactive-layer::after {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+}
+
+
+
+
+
+
+
+/*-------- PMCS TABLE ---------*/
+/* Center table on screen */
+.pmcs-table-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Start from the top instead of center */
+    min-height: 40vh; /* Ensures some minimum height but allows flexibility */
+    padding-bottom: 60px; /* Adds spacing below the table */
+}
+
+
+table {
+    width: 90%;
+    max-width: 1000px; /* Ensures it doesn’t stretch too wide */
+    border-collapse: collapse;
+    margin: auto; /* Centers if flex isn't applied */
+    background-color: var(--primary-color);
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Hide all inspections by default */
+.inspection-container {
+    display: none;
+}
+
+/* Show only the first inspection on load */
+.inspection-container.active {
+    display: table-row-group;
+}
+
+/* Full table view */
+.full-table .inspection-container {
+    display: table-row-group;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 20px; /* Adds space between the table and the buttons */
+    padding-bottom: 0px; /* Ensures they are above the footer */
+    position: relative; /* Keeps it in the document flow */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------- CRAZY OPERATION ---------*/
+.knob-container {
+    position: absolute; /* Keeps it properly positioned */
+    width: 50px; /* Adjust to match actual knob size */
+    height: 50px;
+    cursor: grab;
+}
+
+.knob-container img {
+    width: 100%;
+    height: auto;
+    transform: rotate(0deg);
+    transition: transform 0.1s linear; /* Smooth rotation */
+}
+
+
+
+
+
+
+/*========= UNIVERSAL BACKGROUND OVERLAY (FOR MENU & MODAL) ==========*/
+#universal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dim effect */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999;
+}
+
+/* Ensure the overlay becomes visible when active */
+#universal-overlay.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*========= INFO MODAL ==========*/
+#info-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    height: 600px; /* Fixed height */
+    background: var(--accent-color);
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Open State */
+#info-popup.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Close Button */
+#close-info, #close-menu {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 24px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+}
+
+/* Tabs */
+#info-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.info-tab {
+    background: none;
+    border: 1px solid black;
+    color: #000;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.info-tab.active {
+    background: black;
+    color: white;
+}
+
+/* Scrollable Content */
+#info-content {
+    flex: 1; /* Takes up remaining space */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    max-width: 100%; /* Ensures it fits inside the modal */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Hide inactive sections */
+.info-section {
+    display: none;
+}
+
+.info-section.active {
+    display: block;
+}
+
+/*========= FIXED TABLE STYLING ==========*/
+/* Fix .info-table background color */
+#info-popup .info-table {
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: var(--gray-light) !important;
+    border-collapse: collapse;
+}
+
+/* Fix text wrapping */
+#info-popup .info-table th,
+#info-popup .info-table td {
+    white-space: normal !important;
+    overflow-wrap: break-word;
+word-break: normal; /* Ensures compatibility */
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+#info-popup .info-table th {
+    background-color: #000;
+    color: var(--accent-color);
+}
+
+/* Prevent table from expanding modal */
+#info-popup .info-table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+/* Ensure modal does not allow horizontal overflow */
+#info-content {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+
+
+
+/*========= SLIDE-OUT MENU ==========*/
+#slideout-menu {
+    position: fixed;
+    left: -285px; /* Ensure it's fully off-screen */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #222;
+    color: white;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease-in-out;
+    padding: 50px 15px 15px; /* Top padding added to avoid close button overlap */
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+#slideout-menu.open {
+    left: 0 !important;
+}
+
+/* Adjust menu item spacing */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px; /* Adds spacing below the close button */
+}
+
+nav ul li {
+    margin: 10px 0; /* More spacing */
+}
+
+/* All buttons (including normal links) */
+nav ul li a,
+.section-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: var(--accent-color);
+    color: black;
+    padding: 10px;
+    border: 1px solid white;  /* Outlined buttons */
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Hover effect */
+nav ul li a:hover,
+.section-toggle:hover {
+    background: white;
+    color: #222;
+}
+
+/* Section toggles */
+.section-toggle {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Expand/collapse icons */
+.section-toggle::after {
+    content: "➕";  /* Default collapsed */
+    font-size: 14px;
+}
+
+.section-toggle.open::after {
+    content: "➖";  /* Expanded */
+}
+
+/* Submenu styling */
+/* Hide submenus by default */
+.submenu {
+    display: none;
+    padding-left: 15px;
+}
+
+/* Show submenu when the open class is added */
+.submenu.open {
+    display: block;
+}
+
+
+.submenu a {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid white;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+/* Footer button adjustments */
+.footer-button {
+    background: none;
+    border: 1px solid white;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.footer-button:hover {
+    background: white;
+    color: #222;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====== TROUBLESHOOTING =====*/
+/* ========== Troubleshooting Steps Styling ========== */
+.tshoot-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background: var(--gray-dark); /* Consistent background */
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    text-align: left;
+}
+
+/* Hide steps by default */
+.tshoot-step {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Show step when active */
+.tshoot-step.active {
+    display: block;
+    opacity: 1;
+    padding-bottom: 20px;
+    border-bottom: 2px solid;
+}
+
+/* Button Styling for Troubleshooting Steps */
+.tshoot-step button {
+    margin-top: 10px;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    font-family: var(--font-bold);
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.tshoot-step button:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+
+
+/* ========== Warning Box Styling (Aligned with Army Theme) ========== */
+.warning-box {
+    max-width: 600px; /* Slightly thinner than other text boxes */
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(255, 204, 1, 0.15); /* Light accent color for visibility */
+    border: 3px solid #C41E3A; /* Army red, matches military alert styling */
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font-bold); /* Ensure consistency */
+    color: var(--primary-color); /* Matches standard text color */
+}
+
+/* ========== Warning Box Styling ========== */
+.warning-box {
+    max-width: 600px; /* Slightly thinner than other text boxes */
+    margin: 20px auto;
+    padding: 15px;
+    background: var(--gray-light); /* Light accent color for visibility */
+    border: 3px solid #C41E3A; /* Military-style red */
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-bold);
+    color: var(--primary-color);
+}
+
+/* Warning Title */
+.warning-box h2 {
+    font-size: 22px;
+    font-family: var(--font-heavy); /* Ensure bold military-style text */
+    margin: 0;
+    color: #C41E3A; /* Matches border color */
+}
+
+/* Warning Icon */
+.warning-icon {
+    width: 40px; /* Small size */
+    height: auto;
+}
+
+/* Warning Paragraph */
+.warning-box p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0;
+    text-align: center;
+}
+
+/* ========== Initial Setup Box ========== */
+.setup-box {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background: var(--primary-color);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+}
+
+/* Header for the Setup Box */
+.setup-box h2 {
+    cursor: pointer;
+    padding: 10px;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Hide content by default */
+.setup-box .content {
+    display: none; /* Initially hidden */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 10px;
+}
+
+/* Triangle Indicator */
+.setup-box h2::before {
+    content: "▼"; /* Downward triangle */
+    font-size: 14px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* When box is open, rotate triangle upwards */
+.setup-box.open h2::before {
+    transform: rotate(180deg);
+}
+
+/* Show content when toggled */
+.setup-box.open .content {
+    display: flex; /* Ensures it appears when toggled */
+}
+
+/* Individual Columns */
+.setup-column {
+    flex: 1; /* Makes both columns equal width */
+    min-width: 45%; /* Ensures proper width scaling */
+
+}
+
+/* Ensures lists and text align properly */
+.setup-column h2 {
+    margin-top: 0;
+    font-size: 18px;
+    font-family: var(--font-bold);
+    color: white;
+    padding-bottom: 2px;
+}
+
+.setup-column ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.setup-column li {
+    margin-bottom: 5px;
+}
+
+/* Styling for Links */
+.setup-column a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.setup-column a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Default link color */
+a {
+    color: var(--accent-color); /* Uses Army Gold */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Change color when hovering over links */
+a:hover {
+    color: var(--text-color); /* Changes to white when hovered */
+    text-decoration: underline; /* Adds underline for emphasis */
+}
+
+/* Change color for visited links */
+a:visited {
+    color: var(--gray-light); /* Light gray for visited links */
+}
+
+/* Active link (when clicked) */
+a:active {
+    color: var(--secondary-color); /* Army Green when clicking */
+}
+
+/*======= WELCONE PAGE =============*/
+/* ========== Welcome Page Animation ========== */
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0a0f0d, #1c3b2d); /* Military dark green */
+    color: var(--accent-color); /* Army Gold */
+    font-family: "G.I. 750", sans-serif; /* Strong military font */
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Flash effect simulating a HUD screen turning on */
+.welcome-flash {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    opacity: 0;
+    animation: welcome-flash 0.5s ease-in-out;
+}
+
+/* Flash effect (brief white screen) */
+@keyframes welcome-flash {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Typewriter effect for text */
+.welcome-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid var(--accent-color);
+    font-size: 3rem;
+    width: 0;
+    animation: welcome-typing 2s steps(20, end) forwards, welcome-flicker 0.15s infinite alternate;
+}
+
+/* Typewriter animation */
+@keyframes welcome-typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Flicker effect for a digital mission briefing feel */
+@keyframes welcome-flicker {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+/* Fade out effect before transition */
+@keyframes welcome-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Ensures the logo is hidden initially */
+.hidden-logo {
+    opacity: 0;
+    width: 200px; /* Adjust size as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* Fading in the logo */
+.show-logo {
+    opacity: 1;
+}
+
+/* Smooth page transition */
+@keyframes welcome-fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.fading-out {
+    animation: welcome-fade-out 1.5s ease-in-out forwards;
+}
+
+/*======== RPSTL ===========*/
+/* Outer wrapper ensures the table is centered */
+.rpstl-table-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    height: auto;
+}
+
+
+/* Inner scrollable container with proper width constraints */
+.rpstl-table-container {
+    width: 95%;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+    padding: 0; /* Ensure no padding */
+    margin: 0;  /* Ensure no margin */
+}
+
+
+/* Table formatting */
+.rpstl-table {
+    width: 100%;
+    min-width: 800px; /* Ensures the table doesn't shrink too much */
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+/* Cell formatting */
+
+
+.rpstl-table th,
+.rpstl-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    
+    text-align: left;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflowing content */
+    text-overflow: ellipsis; /* Adds '...' if content overflows */
+}
+
+.rpstl-table td {
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflowing content */
+    text-overflow: ellipsis; /* Adds '...' if content overflows */
+}
+
+/* Header styling */
+.rpstl-table th {
+    background-color: var(--gray-light);
+    text-align: center;
+}
+
+/* Shopping cart button */
+.cart-btn {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.cart-btn:hover {
+    color: green;
+}
+
+/* Make table fully visible on small screens */
+@media screen and (max-width: 768px) {
+    .table-container {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+
+
+    th, td {
+        font-size: 0.85em;
+        padding: 6px;
+    }
+}
+
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.svg-container object {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    background-color: white; /* Just in case */
+}
+
+/*====== Shopping Cart ==========*/
+
+/* Style for the Cart Button */
+#cart-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: var(--accent-color); /* Use project's accent color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+#cart-button:hover {
+    background: var(--accent-hover-color); /* Slightly darker for hover effect */
+}
+
+/* Style for the Cart Modal */
+#cart-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Adjust width dynamically */
+    max-width: 600px; /* Prevents it from becoming too wide */
+    background: var(--accent-color); /* Keep your project color */
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+    overflow: hidden; /* Prevents content overflow */
+}
+
+/* Container for table to add scrolling if needed */
+.cart-table-container {
+    max-height: 300px; /* Prevents modal from becoming too tall */
+    overflow-y: auto; /* Enables vertical scrolling if needed */
+    overflow-x: auto; /* Ensures table stays within bounds */
+    margin-bottom: 10px;
+}
+
+/* Shopping Cart Table Styles */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+    max-width: 100%;
+    display: block; /* Ensures no overflow outside modal */
+}
+
+/* Fix table headers and columns */
+.cart-table th, #cart-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap; /* Prevents headers from breaking */
+}
+
+/* Table Header */
+.cart-table th {
+    background: var(--gray-light); /* Keep matching main styles */
+    color: black;
+}
+
+/* Button Container */
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Close Button */
+#close-cart {
+    background: #ff4444;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#close-cart:hover {
+    background: #cc0000;
+}
+
+/* Export CSV Button */
+#export-cart {
+    background: var(--button-color); /* Match main buttons */
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#export-cart:hover {
+    background: var(--button-hover-color);
+}

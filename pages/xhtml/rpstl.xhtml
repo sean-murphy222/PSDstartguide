@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD html 1.0 Strict//EN" 
+    "http://www.w3.org/TR/html1/DTD/html1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>RPSTL - PSD TM APP</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css"/>
+</head>
+<body>
+    <div class="container">
+        <script src="../assets/js/header-footer-loader.js"></script>
+        <script src="../assets/js/shoppingCart.js"></script>
+        <script src="../assets/js/calloutHighlighting.js"></script>
+        <main>
+            <button id="cart-button">🛍️ Cart (<span id="cart-count">0</span>)</button>
+            <div id="cart-modal">
+                <h3>SHOPPING CART</h3>
+                <p></p>
+                <div class="cart-table-container">
+                    <table class="cart-table" id="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>SMR</th>
+                                <th>NSN</th>
+                                <th>Part Number</th>
+                                <th>CAGE Code</th>
+                                <th>Nomenclature</th>
+                                <th>Quantity</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="cart-buttons">
+                    <button id="export-cart">📄 Export to CSV</button>
+                    <button id="close-cart">❌ Close</button>
+                </div>
+            </div>
+            
+
+            <section>
+             <h2>Group 01 Filter Drier</h2>
+            </section>
+             <section>
+                <div class="image-container">
+                    <div class="svg-container">
+                        <object id="svg-image" type="image/svg+xml" data="../assets/images/G06043300078.svg"></object>
+                    </div>
+                    <p>Figure 1. Filter Drier</p>
+                </div>
+                <div class="rpstl-table-wrapper">
+                    <div class="rpstl-table-container">
+                        <table class="rpstl-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>SMR</th>
+                                    <th>NSN</th>
+                                    <th>Part Number</th>
+                                    <th>CAGE Code</th>
+                                    <th>Nomenclature</th>
+                                    <th>Quantity</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="R00025_11">
+                                    <td><button class="highlight-btn" onclick="highlightSVG(1)">1</button></td>
+                                    <td>PFZZ</td>
+                                    <td>4130-01-610-6656</td>
+                                    <td>10-52700</td>
+                                    <td>30554</td>
+                                    <td>FILTER DRIER,REFRIGERANT</td>
+                                    <td>1</td>
+                                    <td><button class="cart-btn" data-item-id="R00025_11">🛒</button></td>
+                                </tr>
+                                <tr id="R00025_12">
+                                    <td><button class="highlight-btn" onclick="highlightSVG(2)">2</button></td>
+                                    <td>PAFZZ</td>
+                                    <td>5331-00-618-0799</td>
+                                    <td>AM12-018</td>
+                                    <td>93091</td>
+                                    <td>O-RING</td>
+                                    <td>1</td>
+                                    <td><button class="cart-btn" data-item-id="R00025_12">🛒</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section>
+            </section>            
+            
+        </main>
+    </div>
+</body>
+</html>

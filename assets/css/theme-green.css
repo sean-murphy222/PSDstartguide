@@ -1,0 +1,19 @@
+/* Green Theme */
+body {
+    background-color: #003300;
+    color: #ffffff;
+}
+
+header, footer {
+    background-color: #005500;
+    color: white;
+}
+
+button {
+    background-color: #00aa00;
+    color: white;
+}
+
+button:hover {
+    background-color: #007700;
+}

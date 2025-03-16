@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.92 9.36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="12.96" y1="0" x2="12.96" y2="9.36" gradientUnits="userSpaceOnUse">
+      <stop offset=".15" stop-color="#333"/>
+      <stop offset=".47" stop-color="#2e2e2e"/>
+      <stop offset=".82" stop-color="#212121"/>
+      <stop offset=".83" stop-color="#212121"/>
+    </linearGradient>
+  </defs>
+  <g id="DBFB_BUTTON" data-name="DBFB BUTTON">
+    <rect id="DBFB_BUTTON-2" data-name="DBFB BUTTON" class="cls-1" width="25.92" height="9.36"/>
+  </g>
+</svg>

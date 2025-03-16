@@ -1,0 +1,19 @@
+/* Blue Theme */
+body {
+    background-color: #002b5c;
+    color: #ffffff;
+}
+
+header, footer {
+    background-color: #004a99;
+    color: white;
+}
+
+button {
+    background-color: #008cff;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

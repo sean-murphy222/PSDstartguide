@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD html 1.0 Strict//EN" 
+    "http://www.w3.org/TR/html1/DTD/html1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>PMCS - PSD TM APP</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css"/>
+    <script src="../assets/js/header-footer-loader.js"></script>
+       <script src="../assets/js/inspection.js"></script>
+       
+</head>
+
+<body>
+    <section>
+        <div>
+        <h2>Preventive Maintenance Checks and Services (PMCS)</h2>
+        <p>Similar to IADS, the PMCS table in the PSD TM APP allows for predictive logistics support by tracking all entries.</p>
+        <p>The Toggle Table View button allows for users to see all inspecitons at once.</p>
+        </div>
+        <div class="controls">
+            <button onclick="toggleTableView()">Toggle Table View</button>
+            <button onclick="downloadCSV()">Download CSV</button>
+        </div>
+    </section>
+    <section>
+        
+    <div class="inspection-table-container">
+
+    <table id="inspection-table">
+        
+        <thead>
+            <tr>
+                <th>ITEM NO.</th>
+                <th>INTERVAL</th>
+                <th>ITEM TO BE CHECKED OR SERVICED</th>
+                <th>PROCEDURE</th>
+                <th>NON-MISSION CAPABLE IF</th>
+            </tr>
+        </thead>
+        <tbody id="inspection-list">
+            <tbody class="inspection-container active" data-id="001" data-interval="Monthly" data-item="System Check">
+                <tr>
+                    <td rowspan="3">001</td>
+                    <td rowspan="3">Monthly</td>
+                    <td rowspan="3">System Check</td>
+                    <td>1. Open the application</td>
+                    <td rowspan="3">Verify that the login screen is displayed</td>
+                </tr>
+                <tr>
+                    <td>2. Log in with your credentials</td>
+                </tr>
+                <tr>
+                    <td>3. Navigate to the dashboard</td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="text-align:right;">
+                        <button onclick="logResponse('Pass')">Pass</button>
+                        <button onclick="openFailForm()">Fail</button>
+                    </td>
+                </tr>
+            </tbody>
+    
+            <tbody class="inspection-container" data-id="002" data-interval="Weekly" data-item="Settings Update">
+                <tr>
+                    <td rowspan="2">002</td>
+                    <td rowspan="2">Weekly</td>
+                    <td rowspan="2">Settings Update</td>
+                    <td>1. Click on "Settings"</td>
+                    <td rowspan="2">Check that the preferences menu appears</td>
+                </tr>
+                <tr><td>2. Select "Preferences"</td></tr>
+                <tr>
+                    <td colspan="5" style="text-align:right;">
+                        <button onclick="logResponse('Pass')">Pass</button>
+                        <button onclick="openFailForm()">Fail</button>
+                    </td>
+                </tr>
+            </tbody>
+    
+            <tbody class="inspection-container" data-id="003" data-interval="Daily" data-item="Review Settings">
+                <tr>
+                    <td>003</td>
+                    <td>Daily</td>
+                    <td>Review Settings</td>
+                    <td>Review the settings</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="text-align:right;">
+                        <button onclick="logResponse('Pass')">Pass</button>
+                        <button onclick="openFailForm()">Fail</button>
+                    </td>
+                </tr>
+            </tbody>
+        </tbody>
+    </table>
+
+</div>
+</section>
+    <section>
+    <!-- Popup Form for Failure -->
+
+
+    <!-- Popup Form -->
+<!-- Popup Form -->
+<div id="fail-popup" class="popup record-fault">
+    <div class="popup-content">
+        <h3>Record Fault</h3>
+        <form>
+            <div class="popup-list-text">
+                <label for="fault-item">Item No:</label>
+                <input type="text" id="fault-item" readonly>
+            </div>
+            <div class="popup-list-text">
+                <label for="fault-section">Interval:</label>
+                <input type="text" id="fault-section" readonly>
+            </div>
+            <div class="popup-list-text">
+                <label for="fault-date">Date:</label>
+                <input type="text" id="fault-date" readonly>
+            </div>
+            <div class="popup-list-text">
+                <label for="fault-status">Status:</label>
+                <select id="fault-status" required>
+                    <option value="" disabled selected>Select Status</option>
+                    <option value="Not Fully Mission Capable">(X) Not Fully Mission Capable</option>
+                    <option value="Deficiency">(Circled X) Deficiency</option>
+                    <option value="Material Defect">(/) Material Defect</option>
+                    <option value="Inspection Required">(-) Inspection Required</option>
+                    <option value="Verified or Corrected">(Initials) Verified or Corrected</option>
+                </select>
+            </div>
+            <div class="popup-list-text">
+                <label for="fault-description">Description:</label>
+                <textarea id="fault-description"></textarea>
+            </div>
+            <div class="popup-list-text">
+                <label for="fault-corrective">Corrective Action:</label>
+                <textarea id="fault-corrective"></textarea>
+            </div>
+            <div class="popup-list-text">
+                <label for="fault-hrs">HRS:</label>
+                <input type="text" id="fault-hrs">
+            </div>
+            <div class="popup-list-text">
+                <label for="fault-lic">Oper LIC#:</label>
+                <input type="text" id="fault-lic">
+            </div>
+        </form>
+        <div class="popup-controls">
+            <button onclick="closeFailForm()">Cancel</button>
+            <button onclick="submitFailure()">Save</button>
+        </div>
+    </div>
+</div>
+
+</section>
+    
+    </body>
+</html>

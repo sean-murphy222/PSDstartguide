@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 639.36 162.72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-8 {
+        fill: #4a494a;
+      }
+
+      .cls-3 {
+        font-size: 9px;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: CascadiaMono-Roman, 'Cascadia Mono';
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-9 {
+        fill: #606161;
+      }
+
+      .cls-4, .cls-5 {
+        font-size: 5px;
+      }
+
+      .cls-5, .cls-6 {
+        font-family: CascadiaMonoRoman-ExtraLight, 'Cascadia Mono';
+        font-variation-settings: 'wght' 200;
+        font-weight: 200;
+      }
+
+      .cls-6 {
+        font-size: 4px;
+      }
+    </style>
+  </defs>
+  <g id="BG">
+    <g>
+      <rect class="cls-8" width="639.36" height="162.72" rx="6.84" ry="6.84"/>
+      <line class="cls-7" x1="155.24" y1="90.58" x2="167" y2="90.58"/>
+      <line class="cls-7" x1="117.64" y1="90.58" x2="130.8" y2="90.58"/>
+      <text class="cls-4" transform="translate(216.01 138.88)"><tspan x="0" y="0">LEFT</tspan></text>
+      <text class="cls-4" transform="translate(255.01 138.88)"><tspan x="0" y="0">RIGHT</tspan></text>
+      <text class="cls-3" transform="translate(18.26 84.61)"><tspan x="0" y="0">SPEAKERS</tspan></text>
+      <text class="cls-3" transform="translate(13.58 128.16)"><tspan x="0" y="0">HEADPHONES</tspan></text>
+      <text class="cls-3" transform="translate(24.16 94.22)"><tspan x="0" y="0">A</tspan></text>
+      <text class="cls-3" transform="translate(50.43 94.22)"><tspan x="0" y="0">B</tspan></text>
+      <text class="cls-3" transform="translate(132.98 92.77)"><tspan x="0" y="0">TONE</tspan></text>
+      <text class="cls-3" transform="translate(166.25 92.77)"><tspan x="0" y="0">TREBLE</tspan></text>
+      <text class="cls-3" transform="translate(222.31 92.77)"><tspan x="0" y="0">BALANCE</tspan></text>
+      <text class="cls-3" transform="translate(94.22 92.77)"><tspan x="0" y="0">BASS</tspan></text>
+      <circle class="cls-2" cx="241.16" cy="103.59" r=".58"/>
+      <circle class="cls-2" cx="229.16" cy="137.76" r=".58"/>
+      <circle class="cls-2" cx="253.16" cy="137.76" r=".58"/>
+      <text class="cls-5" transform="translate(533.79 134.34)"><tspan x="0" y="0">DBFB</tspan></text>
+      <text class="cls-5" transform="translate(562.05 134.34)"><tspan x="0" y="0">MUTING</tspan></text>
+      <text class="cls-5" transform="translate(589.81 134.34)"><tspan x="0" y="0">SURROUND</tspan></text>
+      <rect class="cls-9" x="527.04" y="124.26" width="25.92" height="2.94"/>
+      <rect class="cls-9" x="558" y="124.26" width="25.92" height="2.94"/>
+      <rect class="cls-9" x="588.96" y="124.26" width="25.92" height="2.94"/>
+      <text class="cls-3" transform="translate(599.2 31.68)"><tspan x="0" y="0">VOLUME</tspan></text>
+      <rect class="cls-1" x="280.52" y="10.62" width="214.56" height="91.8" rx="12" ry="12"/>
+      <g>
+        <circle class="cls-2" cx="182.36" cy="100.88" r=".58"/>
+        <circle class="cls-2" cx="199.06" cy="139.66" r=".58"/>
+        <circle class="cls-2" cx="165.66" cy="139.66" r=".58"/>
+        <text class="cls-6" transform="translate(181.18 99.41)"><tspan x="0" y="0">0</tspan></text>
+        <text class="cls-6" transform="translate(200.24 141.1)"><tspan x="0" y="0">+5</tspan></text>
+        <text class="cls-6" transform="translate(159.56 141.1)"><tspan x="0" y="0">-5</tspan></text>
+      </g>
+      <g>
+        <circle class="cls-2" cx="104.84" cy="100.88" r=".58"/>
+        <circle class="cls-2" cx="121.54" cy="139.66" r=".58"/>
+        <circle class="cls-2" cx="88.14" cy="139.66" r=".58"/>
+        <text class="cls-6" transform="translate(103.66 99.41)"><tspan x="0" y="0">0</tspan></text>
+        <text class="cls-6" transform="translate(122.72 141.1)"><tspan x="0" y="0">+5</tspan></text>
+        <text class="cls-6" transform="translate(82.04 141.1)"><tspan x="0" y="0">-5</tspan></text>
+      </g>
+      <g>
+        <circle class="cls-2" cx="536" cy="109.22" r=".58"/>
+        <circle class="cls-2" cx="533.14" cy="106.04" r=".58"/>
+        <circle class="cls-2" cx="530.57" cy="102.62" r=".58"/>
+        <circle class="cls-2" cx="528.3" cy="99" r=".58"/>
+        <circle class="cls-2" cx="526.37" cy="95.19" r=".58"/>
+        <circle class="cls-2" cx="524.76" cy="91.22" r=".58"/>
+        <circle class="cls-2" cx="523.52" cy="87.13" r=".58"/>
+        <circle class="cls-2" cx="522.63" cy="82.95" r=".58"/>
+        <circle class="cls-2" cx="522.11" cy="78.71" r=".58"/>
+        <circle class="cls-2" cx="521.96" cy="74.44" r=".58"/>
+        <circle class="cls-2" cx="522.19" cy="70.17" r=".58"/>
+        <circle class="cls-2" cx="522.78" cy="65.94" r=".58"/>
+        <circle class="cls-2" cx="523.75" cy="61.77" r=".58"/>
+        <circle class="cls-2" cx="525.07" cy="57.71" r=".58"/>
+        <circle class="cls-2" cx="526.74" cy="53.77" r=".58"/>
+        <circle class="cls-2" cx="528.75" cy="50" r=".58"/>
+        <circle class="cls-2" cx="531.08" cy="46.41" r=".58"/>
+        <circle class="cls-2" cx="533.71" cy="43.05" r=".58"/>
+        <circle class="cls-2" cx="536.62" cy="39.92" r=".58"/>
+        <circle class="cls-2" cx="539.8" cy="37.06" r=".58"/>
+        <circle class="cls-2" cx="543.22" cy="34.49" r=".58"/>
+        <circle class="cls-2" cx="546.84" cy="32.22" r=".58"/>
+        <circle class="cls-2" cx="550.65" cy="30.29" r=".58"/>
+        <circle class="cls-2" cx="554.62" cy="28.68" r=".58"/>
+        <circle class="cls-2" cx="558.71" cy="27.44" r=".58"/>
+        <circle class="cls-2" cx="562.89" cy="26.55" r=".58"/>
+        <circle class="cls-2" cx="567.13" cy="26.03" r=".58"/>
+        <circle class="cls-2" cx="571.4" cy="25.88" r=".58"/>
+        <circle class="cls-2" cx="575.67" cy="26.11" r=".58"/>
+        <circle class="cls-2" cx="579.9" cy="26.7" r=".58"/>
+        <circle class="cls-2" cx="584.07" cy="27.67" r=".58"/>
+        <circle class="cls-2" cx="588.13" cy="28.99" r=".58"/>
+        <circle class="cls-2" cx="592.07" cy="30.66" r=".58"/>
+        <circle class="cls-2" cx="595.84" cy="32.67" r=".58"/>
+        <circle class="cls-2" cx="599.43" cy="35" r=".58"/>
+        <circle class="cls-2" cx="602.79" cy="37.63" r=".58"/>
+        <circle class="cls-2" cx="605.92" cy="40.54" r=".58"/>
+        <circle class="cls-2" cx="608.78" cy="43.72" r=".58"/>
+        <circle class="cls-2" cx="611.35" cy="47.14" r=".58"/>
+        <circle class="cls-2" cx="613.62" cy="50.76" r=".58"/>
+        <circle class="cls-2" cx="615.55" cy="54.57" r=".58"/>
+        <circle class="cls-2" cx="617.16" cy="58.54" r=".58"/>
+        <circle class="cls-2" cx="618.4" cy="62.63" r=".58"/>
+        <circle class="cls-2" cx="619.29" cy="66.81" r=".58"/>
+        <circle class="cls-2" cx="619.81" cy="71.05" r=".58"/>
+        <circle class="cls-2" cx="619.96" cy="75.32" r=".58"/>
+        <circle class="cls-2" cx="619.73" cy="79.59" r=".58"/>
+        <circle class="cls-2" cx="619.14" cy="83.82" r=".58"/>
+        <circle class="cls-2" cx="618.17" cy="87.99" r=".58"/>
+        <circle class="cls-2" cx="616.85" cy="92.05" r=".58"/>
+        <circle class="cls-2" cx="615.18" cy="95.99" r=".58"/>
+        <circle class="cls-2" cx="613.17" cy="99.76" r=".58"/>
+        <circle class="cls-2" cx="610.84" cy="103.35" r=".58"/>
+        <circle class="cls-2" cx="608.21" cy="106.71" r=".58"/>
+        <circle class="cls-2" cx="605.3" cy="109.84" r=".58"/>
+      </g>
+    </g>
+  </g>
+</svg>
